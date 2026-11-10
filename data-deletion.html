@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedi Data Deletion / 데이터 삭제 안내</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1c1e;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --accent: #3f51b5;
+    --card: #f9fafb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16171a;
+      --fg: #e8e8ea;
+      --muted: #9aa0a6;
+      --border: #2c2d31;
+      --accent: #9fa8f0;
+      --card: #1e1f23;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 16px 80px; }
+  h1 { font-size: 1.6rem; margin: 0 0 6px; }
+  .meta { color: var(--muted); font-size: 0.9rem; }
+  nav.lang { margin-top: 12px; font-size: 0.95rem; }
+  h2 { font-size: 1.15rem; margin: 32px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+  p { margin: 8px 0; }
+  ul, ol { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .note { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin: 12px 0; font-size: 0.92rem; }
+  a { color: var(--accent); overflow-wrap: anywhere; }
+  hr.lang-divider { margin: 56px 0 24px; border: none; border-top: 3px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Wedi 데이터 삭제 안내 / Data Deletion</h1>
+    <div class="meta">앱 / App: Wedi (com.wedi.app) · 개발자 / Developer: K-Brain Games Lab · 시행일 / Effective date: 2026-11-10</div>
+    <nav class="lang"><a href="#ko">한국어</a> · <a href="#en">English</a></nav>
+  </header>
+
+  <!-- ===================== 한국어 ===================== -->
+  <section id="ko" lang="ko">
+    <p>
+      Wedi는 회원가입이 없고 개발자 서버를 운영하지 않습니다. 메모·설정·지역 등 앱의 모든 데이터는 <strong>이용자 기기에만</strong> 저장되므로,
+      이용자가 기기에서 직접 삭제할 수 있으며 별도 승인 절차나 대기 시간이 없습니다.
+    </p>
+
+    <h2>1. 앱 안에서 삭제하기</h2>
+    <ol>
+      <li><strong>메모</strong>: 메인 화면의 메모 목록에서 각 메모의 휴지통 버튼을 누르면 즉시 삭제됩니다.</li>
+      <li><strong>Claude API 키</strong>: 설정 화면의 Claude AI 추천 입력란을 비우면 기기에서 지워집니다.</li>
+      <li><strong>날씨 캐시</strong>: 설정 &gt; 데이터 관리 &gt; <strong>날씨 캐시 초기화</strong>를 누르면 저장된 날씨 값과 마지막 음성 재생 날짜가 삭제됩니다.</li>
+      <li><strong>즐겨찾기 지역</strong>: 설정의 지역 목록에서 삭제할 수 있습니다.</li>
+    </ol>
+
+    <h2>2. 전체 데이터 한 번에 삭제하기</h2>
+    <ul>
+      <li>Android 설정 &gt; 애플리케이션 &gt; Wedi &gt; 저장공간 &gt; <strong>데이터 삭제</strong>: 메모, 설정, 지역·즐겨찾기, API 키, 날씨 캐시가 모두 삭제됩니다.</li>
+      <li>앱 삭제(제거): 기기에 저장된 모든 데이터가 함께 삭제됩니다.</li>
+    </ul>
+
+    <h2>3. 개발자 쪽에 남는 데이터</h2>
+    <p>
+      개발자는 서버를 운영하지 않으며 이용자 데이터를 받거나 보관하지 않으므로, 대신 삭제해 드려야 할 데이터가 없습니다.
+      날씨 조회(기상청, OpenWeatherMap, Tomorrow.io), 지역명 조회(Nominatim), AI 요청(Anthropic, 이용자가 API 키를 입력한 경우)으로 전송된 정보는 각 서비스의 정책에 따라 처리됩니다.
+    </p>
+
+    <h2>4. 광고 데이터</h2>
+    <p>
+      Google AdMob이 수집하는 광고 ID 등은 Google 정책에 따라 관리됩니다.
+      Android 설정 &gt; 개인정보 보호(또는 Google) &gt; 광고에서 광고 ID를 재설정·삭제할 수 있고,
+      <a href="https://myadcenter.google.com">Google 내 광고 센터</a>에서 맞춤 광고를 끌 수 있습니다.
+    </p>
+
+    <h2>5. 문의</h2>
+    <div class="note">
+      삭제가 어렵거나 궁금한 점이 있으면 연락해주세요. 합리적인 기간 내에 답변드립니다.<br>
+      이메일: <a href="mailto:teeth07@naver.com">teeth07@naver.com</a>
+    </div>
+    <p>자세한 내용은 <a href="privacy-policy.html">개인정보처리방침</a>을 참고해주세요.</p>
+  </section>
+
+  <hr class="lang-divider">
+
+  <!-- ===================== English ===================== -->
+  <section id="en" lang="en">
+    <p>
+      Wedi has no account and the developer does not operate a server. All App data, such as memos, preferences, and locations, is stored <strong>only on your device</strong>,
+      so you can delete it yourself at any time, with no approval process or waiting period.
+    </p>
+
+    <h2>1. Deleting Data in the App</h2>
+    <ol>
+      <li><strong>Memos</strong>: tap the trash button on a memo in the main screen's memo list to delete it immediately.</li>
+      <li><strong>Claude API key</strong>: clear the Claude AI field in Settings to remove it from the device.</li>
+      <li><strong>Weather cache</strong>: Settings &gt; Data Management &gt; <strong>Reset Weather Cache</strong> deletes stored weather values and the date of the last voice briefing.</li>
+      <li><strong>Favorite locations</strong>: remove them from the location list in Settings.</li>
+    </ol>
+
+    <h2>2. Deleting Everything at Once</h2>
+    <ul>
+      <li>Android Settings &gt; Apps &gt; Wedi &gt; Storage &gt; <strong>Clear data</strong>: deletes memos, preferences, locations and favorites, the API key, and the weather cache.</li>
+      <li>Uninstalling the App: deletes all data stored on the device.</li>
+    </ul>
+
+    <h2>3. Data Held by the Developer</h2>
+    <p>
+      The developer does not operate a server and does not receive or store your data, so there is nothing for us to delete on your behalf.
+      Information sent for weather (KMA, OpenWeatherMap, Tomorrow.io), place names (Nominatim), and AI requests (Anthropic, only if you entered an API key) is handled under each service's own policy.
+    </p>
+
+    <h2>4. Advertising Data</h2>
+    <p>
+      Advertising identifiers collected by Google AdMob are managed under Google's policies.
+      You can reset or delete your advertising ID in Android Settings &gt; Privacy (or Google) &gt; Ads, and turn off personalized ads in
+      <a href="https://myadcenter.google.com">Google My Ad Center</a>.
+    </p>
+
+    <h2>5. Contact</h2>
+    <div class="note">
+      If you have trouble deleting data or have questions, contact us. We will respond within a reasonable time.<br>
+      Email: <a href="mailto:teeth07@naver.com">teeth07@naver.com</a>
+    </div>
+    <p>See the <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
+  </section>
+</div>
+</body>
+</html>
