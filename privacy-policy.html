@@ -77,7 +77,7 @@
       <thead><tr><th>항목</th><th>목적</th><th>처리·저장 위치</th></tr></thead>
       <tbody>
         <tr>
-          <td>기기 위치(대략적 위치)</td>
+          <td>기기의 대략적 위치 (정밀 위치는 수집하지 않음)</td>
           <td>현재 위치의 날씨·예보·대기질·자외선 조회, 지역명 표시</td>
           <td>"GPS 자동 감지" 설정일 때 날씨를 불러올 때마다 기기에서 읽어 3항의 날씨·지역명 서비스로 좌표만 전송. 개발자 서버로 보내거나 저장하지 않음</td>
         </tr>
@@ -184,7 +184,7 @@
 
     <h2>5. 권한 사용</h2>
     <ul>
-      <li><strong>위치</strong>: 현재 위치의 날씨를 보여주기 위해 사용하며, 대략적인 정확도로만 요청합니다. 거부해도 설정에서 지역을 직접 선택해 이용할 수 있습니다. 앱이 열려 있을 때 날씨를 불러오는 시점에만 위치를 읽습니다.</li>
+      <li><strong>위치(대략적 위치)</strong>: 현재 위치의 날씨를 보여주기 위해 사용합니다. 앱은 대략적 위치 권한(ACCESS_COARSE_LOCATION)만 요청하며, 정밀 위치 권한(ACCESS_FINE_LOCATION)은 요청하지 않습니다. 날씨는 시·구 단위로 충분하기 때문입니다. 거부해도 설정에서 지역을 직접 선택해 이용할 수 있습니다. 앱이 열려 있을 때 날씨를 불러오는 시점에만 위치를 읽습니다.</li>
       <li><strong>알림, 정확한 알람, 잠금 화면 전체 화면 표시, 재부팅 후 알람 복원</strong>: 이용자가 정한 시각의 매일 날씨 알람과, 앱이 날씨를 불러올 때 비·눈·강풍·미세먼지·폭염·한파 조건에 해당하면 띄우는 기상 알림에 사용합니다. 알림은 기기 안에서 예약·생성되며 외부 푸시 서버를 쓰지 않습니다. 알람과 각 기상 알림은 설정에서 끌 수 있습니다.</li>
       <li><strong>인터넷</strong>: 날씨 조회, AI 요청, 광고, 외부 링크 열기에 사용합니다.</li>
     </ul>
@@ -269,7 +269,7 @@
       <thead><tr><th>Data</th><th>Purpose</th><th>Where it is processed / stored</th></tr></thead>
       <tbody>
         <tr>
-          <td>Device location (approximate)</td>
+          <td>Approximate device location (precise location is not collected)</td>
           <td>Getting weather, forecast, air quality, and UV for your current location; showing the place name</td>
           <td>With "Auto GPS Detection" on, read on the device each time weather is loaded, and only the coordinates are sent to the weather and place-name services in Section 3. Never sent to or stored on a developer server</td>
         </tr>
@@ -376,7 +376,7 @@
 
     <h2>5. Permissions</h2>
     <ul>
-      <li><strong>Location</strong>: used to show weather for where you are, requested at approximate accuracy only. If you deny it, you can still pick a location manually in Settings. The App reads your location only while it is open and loading weather.</li>
+      <li><strong>Location (approximate)</strong>: used to show weather for where you are. The App requests only the approximate location permission (ACCESS_COARSE_LOCATION) and does not request the precise location permission (ACCESS_FINE_LOCATION), because city- or district-level accuracy is enough for weather. If you deny it, you can still pick a location manually in Settings. The App reads your location only while it is open and loading weather.</li>
       <li><strong>Notifications, exact alarms, full-screen display on the lock screen, restoring alarms after reboot</strong>: used for the daily weather alarm at the time you set, and for weather alerts shown when the App loads weather and finds rain, snow, strong wind, fine dust, heat-wave, or cold-wave conditions. Notifications are scheduled and created on the device; no external push server is used. The alarm and each alert type can be turned off in Settings.</li>
       <li><strong>Internet</strong>: used for weather requests, AI requests, ads, and opening external links.</li>
     </ul>
